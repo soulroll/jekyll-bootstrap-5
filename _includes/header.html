@@ -1,0 +1,26 @@
+<header class="site-header" role="banner">
+
+  {% assign custom_url = site.url | append: site.baseurl %}
+  {% assign full_base_url = custom_url %}
+
+  <nav class="navbar navbar-light navbar-static-top bg-faded">
+    <div class="container">
+      <button data-target="#main-nav-items" data-toggle="collapse" type="button" class="navbar-toggler hidden-sm-up">
+        ☰
+      </button>
+      <div id="main-nav-items" class="collapse navbar-toggleable-xs">
+        <a class="site-title navbar-brand" href="{{ full_base_url }}/">{{ site.title | escape }}</a>
+        <ul class="nav navbar-nav">
+          {% for my_page in site.pages %}
+            {% if my_page.title %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ my_page.url | prepend: full_base_url }}">{{ my_page.title | escape }}</a>
+            </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>

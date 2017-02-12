@@ -1,0 +1,23 @@
+{
+  "name": "jekyll-bootstrap-4",
+  "version": "0.0.0",
+  "description": "Jekyll + Gulp + Browser-sync + Bootstrap 4 + Font-Awesome",
+  "main": "gulpfile.js",
+  "author": "David Malone - david@souldesign.net.nz",
+  "keywords": [
+    "Jekyll",
+    "Gulp",
+    "Sass",
+    "Bootstrap",
+    "Browser-sync"
+  ],
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-autoprefixer": "3.1.1",
+    "browser-sync": "^2.18.7",
+    "bootstrap": "~4.0.0-alpha.6",
+    "tether": "~1.4.0",
+    "font-awesome": "~4.6.3"
+  }
+}
