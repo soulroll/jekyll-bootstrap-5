@@ -1,0 +1,12 @@
+# example /_data/navigation.yml
+- title: "About"
+  href: /about/
+
+- title: "Testimonials"
+  href: /testimonials/
+
+- title: "Websites"
+  href: /websites/
+
+- title: "Contact"
+  href: /contact/

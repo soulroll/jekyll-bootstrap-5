@@ -1,0 +1,40 @@
+/* Footer */
+footer {
+  background-color: #222;
+  padding: 30px 0px 30px 0px;
+  color: #888;
+  a {
+    color: #888;
+  }
+}
+.footer-copyright {
+  float: left;
+}
+.footer-copyright-symbol {
+  color: #ddd;
+}
+.footer-links {
+  float: right;
+  text-align: right;
+}
+.footer-author {
+  font-size: 12px;
+}
+.footer-divider {
+  &:after {
+    content:"-";
+    color: #fff;
+  }
+}
+@include media-breakpoint-down(md) {
+  .footer-copyright {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .footer-links {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}

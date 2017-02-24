@@ -1,0 +1,54 @@
+/* Header */
+header {
+  background-color: #fff;
+  padding: 16px 0px 20px 0px;
+}
+.logo {
+  float: left;
+  color: #000;
+}
+.logo-link {
+  margin:0 auto;
+  display: inline-block;
+  &:hover {
+    color: #000;
+    text-decoration: none;
+  }
+}
+.contact-info {
+  float: right;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.contact-info-email {
+  color: #000;
+  &:hover {
+    text-decoration: none;
+    color: #000;
+  }
+}
+.site-title {
+  font-weight: bold;
+  margin-top: 12px;
+  color: #000;
+  font-size: 22px;
+  display: inline-block;
+  line-height: 1.3;
+}
+.site-tagline {
+  color: #000;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+@include media-breakpoint-down(md) {
+  .logo {
+    float: left;
+    width: 100%;
+    text-align: center;
+  }
+  .contact-info {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+  }
+}

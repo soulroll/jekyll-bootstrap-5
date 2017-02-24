@@ -1,2 +1,10 @@
 /* Bootstrap */
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+/* Layout */
+@import "layout/header";
+@import "layout/page";
+@import "layout/footer";
+
+/* Components */
+@import "components/navbar";

@@ -16,12 +16,10 @@
   <body>
 
     {% include header.html %}
+    
+    {% include navigation.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+    {{ content }}
 
     {% include footer.html %}
 

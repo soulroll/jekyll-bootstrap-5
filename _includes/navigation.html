@@ -1,0 +1,36 @@
+<nav class="clearfix">
+  <div class="container">
+    <div class="col mobile-navigation">
+      <a href="#" class="mobile-toggle">
+        <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+      </a>
+      <ul class="navigation">
+        {% for nav in site.data.navigation %}
+          {% if nav.children != null %}
+            <li class="navigation-item">
+              <a href="{{ nav.href }}" class="navigation-link">
+                {{ nav.title }}
+              </a>
+              <span class="navigation-mobile-chevron"></span>
+              <ul class="navigation-submenu">
+                {% for child in nav.children %}
+                  <li class="navigation-submenu-item">
+                    <a class="navigation-submenu-link" href="{{ child.childhref }}">
+                      {{ child.childtitle }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% else %}
+            <li class="navigation-item">
+              <a href="{{ nav.href }}" class="navigation-link">
+                {{ nav.title }}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>
