@@ -7249,56 +7249,11 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   .hidden-print {
     display: none !important; } }
 
+/* Mixins */
 /* Layout */
 /* Header */
-header {
-  background-color: #fff;
-  padding: 16px 0px 20px 0px; }
-
-.logo {
-  float: left;
-  color: #000; }
-
-.logo-link {
-  margin: 0 auto;
-  display: inline-block; }
-  .logo-link:hover {
-    color: #000;
-    text-decoration: none; }
-
-.contact-info {
-  float: right;
-  margin-top: 20px;
-  font-size: 20px; }
-
-.contact-info-email {
-  color: #000; }
-  .contact-info-email:hover {
-    text-decoration: none;
-    color: #000; }
-
-.site-title {
-  font-weight: bold;
-  margin-top: 12px;
-  color: #000;
-  font-size: 22px;
-  display: inline-block;
-  line-height: 1.3; }
-
-.site-tagline {
-  color: #000;
-  line-height: 1.3;
-  margin-bottom: 12px; }
-
-@media (max-width: 991px) {
-  .logo {
-    float: left;
-    width: 100%;
-    text-align: center; }
-  .contact-info {
-    width: 100%;
-    text-align: center;
-    margin-top: 0; } }
+header .container {
+  padding: 0; }
 
 /* Page */
 .page-background {
@@ -7309,7 +7264,7 @@ header {
 
 /* Footer */
 footer {
-  background-color: #222;
+  background-color: #333;
   padding: 30px 0px 30px 0px;
   color: #888; }
   footer a {
@@ -7343,142 +7298,3 @@ footer {
     margin-bottom: 15px; } }
 
 /* Components */
-/* Desktop */
-nav {
-  background-color: #ddd; }
-
-.navigation {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 0; }
-  @media (max-width: 767px) {
-    .navigation {
-      clear: both;
-      display: none; } }
-
-.navigation-item {
-  position: relative;
-  float: left; }
-  .navigation-item:first-child .navigation-link {
-    padding-left: 0; }
-  @media (max-width: 767px) {
-    .navigation-item {
-      float: none; }
-      .navigation-item:first-child .navigation-link {
-        border-top: 1px solid #ccc;
-        padding-left: 15px; }
-      .navigation-item:last-child .navigation-link {
-        border-bottom: 0; } }
-
-.navigation-link {
-  display: block;
-  padding: 12px 15px 12px 15px; }
-  .navigation-link:hover {
-    text-decoration: none; }
-  @media (max-width: 767px) {
-    .navigation-link {
-      border-bottom: 1px solid #ccc;
-      padding: 10px 15px 10px 15px; } }
-
-@media (max-width: 767px) {
-  .navigation-desktop-chevron {
-    display: none; } }
-
-/* Desktop Hover */
-@media (min-width: 768px) {
-  .navigation-item:hover .navigation-submenu {
-    display: block; } }
-
-/* Hamburger Button */
-.mobile-toggle {
-  padding: 10px 10px 8px 10px;
-  color: #000;
-  font-size: 14px;
-  display: none;
-  float: right; }
-  @media (max-width: 767px) {
-    .mobile-toggle {
-      display: block; } }
-
-.navigation.open {
-  display: block; }
-
-/* Submenu */
-.navigation-submenu {
-  display: none;
-  position: absolute;
-  z-index: 99;
-  background-color: #ddd;
-  list-style: none;
-  padding: 0;
-  width: 200px; }
-  @media (max-width: 767px) {
-    .navigation-submenu {
-      width: 100%;
-      position: relative; } }
-
-.navigation-submenu.open {
-  display: block; }
-  @media (min-width: 768px) {
-    .navigation-submenu.open {
-      display: none; } }
-
-.navigation-submenu-link {
-  display: block;
-  padding: 10px 15px 10px 15px; }
-  .navigation-submenu-link:hover {
-    text-decoration: none; }
-  @media (max-width: 767px) {
-    .navigation-submenu-link {
-      border-bottom: 1px solid #ccc;
-      padding: 10px 15px 10px 30px; } }
-
-/* Submenu's Submenu */
-.navigation-submenu-submenu {
-  display: none;
-  list-style: none;
-  padding: 0; }
-
-.navigation-submenu-submenu.open {
-  display: block; }
-  @media (min-width: 768px) {
-    .navigation-submenu-submenu.open {
-      display: none; } }
-
-.navigation-submenu-submenu-link {
-  display: block;
-  padding: 10px 15px 10px 15px; }
-  .navigation-submenu-submenu-link:hover {
-    text-decoration: none; }
-  @media (max-width: 767px) {
-    .navigation-submenu-submenu-link {
-      border-bottom: 1px solid #ccc;
-      padding: 10px 15px 10px 60px; } }
-
-/* Mobile Chevron */
-.navigation-mobile-chevron {
-  display: none;
-  position: absolute;
-  z-index: 99;
-  right: 0;
-  top: 0;
-  padding: 10px 15px 10px 15px;
-  background-color: #aaa;
-  cursor: pointer; }
-  .navigation-mobile-chevron:after {
-    font-family: FontAwesome;
-    content: '\f078';
-    font-size: 14px; }
-  @media (max-width: 767px) {
-    .navigation-mobile-chevron {
-      display: block; } }
-
-.navigation-mobile-chevron.open:after {
-  font-family: FontAwesome;
-  content: '\f077'; }
-
-@media (max-width: 767px) {
-  .mobile-navigation {
-    padding-left: 0;
-    padding-right: 0;
-    width: 100% !important; } }

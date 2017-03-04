@@ -88,7 +88,7 @@ gulp.task('js', function(done) {
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch('_scss/*.scss', ['sass']);
+    gulp.watch('_scss/**/*.scss', ['sass']);
     gulp.watch('_js/*.js', ['js']);
     gulp.watch(['*.html', '_layouts/*.html', '_pages/*', '_posts/*', '_data/*', '_includes/*'], ['jekyll-rebuild']);
 });
