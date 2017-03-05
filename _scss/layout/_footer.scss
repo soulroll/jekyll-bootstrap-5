@@ -7,34 +7,29 @@ footer {
     color: #888;
   }
 }
+
 .footer-copyright {
   float: left;
 }
-.footer-copyright-symbol {
-  color: #ddd;
-}
-.footer-links {
+.footer-facebook {
   float: right;
-  text-align: right;
+  font-size: 24px;
+}
+.footer-twitter {
+  float: right;
+  font-size: 24px;
+  margin-right: 15px;
+}
+
+.footer-sitemap {
+  float: right;
 }
 .footer-author {
-  font-size: 12px;
+  float: right;
 }
 .footer-divider {
   &:after {
     content:"-";
     color: #fff;
-  }
-}
-@include media-breakpoint-down(md) {
-  .footer-copyright {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-  .footer-links {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 15px;
   }
 }

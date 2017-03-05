@@ -7,12 +7,26 @@
     margin: 0;
     padding: 0;
     font-size: 16px;
+    color: #777;
   }
 }
 .phone,
 .email {
   float: right;
+  color: #777;
 }
 .email {
-  margin-right: 25px;
+  margin-right: 30px;
+  i {
+    font-size: 18px;
+    position: relative;
+    margin-right: 2px;
+  }
+}
+.phone {
+  i {
+    position: relative;
+    font-size: 18px;
+    top: 1px;
+  }
 }
