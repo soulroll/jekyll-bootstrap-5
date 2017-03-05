@@ -1,0 +1,86 @@
+/* Home Page */
+.home-intro {
+  display: block;
+  @include rem(padding, 30px 0px 30px 0px);
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 0;
+    .btn-success {
+      width: 100%;
+    }
+  }
+}
+
+.home-carousel {
+  @include rem(margin, 30px 0px 30px 0px);
+  border: 1px solid #bbb;
+  box-shadow: rgba(0,0,0,0.0980392) 0 1px 4px;
+  img {
+    height:100%;
+    width:100%;
+  }
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
+}
+
+.home-page-center-background {
+  background-color: #ccc;
+  @include rem(padding, 30px 0px 30px 0px);
+  @include media-breakpoint-down(xs) {
+    background-color: #fff;
+  }
+}
+
+.home-box {
+  background-color: #fff;
+  float: left;
+  width: 100%;
+  border: 1px solid #bbb;
+  box-shadow: rgba(0,0,0,0.0980392) 0 1px 4px;
+  @include media-breakpoint-down(xs) {
+    box-shadow: none;
+  }
+  img {
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    @include rem(margin-bottom, 40px);
+    img {
+      float: left;
+      width: 50%;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    @include rem(padding, 0px);
+    img {
+      float: left;
+      width: 100%;
+    }
+  }
+  .home-box-content {
+    float: left;
+    width: 100%;
+    @include rem(padding, 30px);
+    @include media-breakpoint-down(md) {
+      width: 50%;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+}
+
+.call-to-action {
+  @include rem(padding, 20px 0px 20px 0px);
+  float: left;
+  width: 100%;
+  h3 {
+    @include rem(margin-top, 6px);
+  }
+}
+.call-to-action-btn {
+  float: right;
+  @include rem(padding, 10px 20px 10px 20px);
+}

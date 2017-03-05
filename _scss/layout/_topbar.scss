@@ -1,0 +1,18 @@
+/* Header */
+.topbar {
+  @include rem(padding, 4px 0px 4px 0px);
+  background-color: #eee;
+  h1 {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+}
+.phone,
+.email {
+  float: right;
+}
+.email {
+  margin-right: 25px;
+}

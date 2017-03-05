@@ -10,6 +10,7 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   </head>
   <body>
+    {% include topbar.html %}
     {% include header.html %}
     {{ content }}
     {% include footer.html %}

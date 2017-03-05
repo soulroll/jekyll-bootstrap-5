@@ -1,10 +1,21 @@
 /* Bootstrap */
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+/* Font Awesome */
+$fa-font-path: "../fonts/FontAwesome";
+@import "../node_modules/font-awesome/scss/font-awesome";
+
 /* Mixins */
 @import "mixins/rem";
 
+/* Global */
+@import "base/global";
+
+/* Page */
+@import "pages/home-page";
+
 /* Layout */
+@import "layout/topbar";
 @import "layout/header";
 @import "layout/page";
 @import "layout/footer";
