@@ -9571,7 +9571,11 @@ img {
   color: #777; }
 
 .email {
-  margin-right: 30px; }
+  margin-right: 30px;
+  color: #777; }
+  .email:hover {
+    text-decoration: none;
+    color: #555; }
   .email i {
     font-size: 18px;
     position: relative;
@@ -9596,6 +9600,18 @@ header {
 .page {
   padding: 30px 0px 30px 0px; }
 
+/* Page banner */
+.page-banner-background {
+  background-color: #eee; }
+
+.page-banner {
+  padding-top: 20px;
+  padding-top: 1.25rem;
+  padding-bottom: 20px;
+  padding-bottom: 1.25rem; }
+  .page-banner h1 {
+    margin: 0; }
+
 /* Footer */
 footer {
   background-color: #333;
@@ -9603,6 +9619,8 @@ footer {
   color: #888; }
   footer a {
     color: #888; }
+    footer a:hover {
+      color: #fff; }
 
 .footer-copyright {
   float: left; }
@@ -9627,3 +9645,6 @@ footer {
   color: #fff; }
 
 /* Components */
+/* Header */
+.navbar-toggler {
+  cursor: pointer; }

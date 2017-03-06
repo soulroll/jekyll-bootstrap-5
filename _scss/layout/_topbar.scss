@@ -17,6 +17,11 @@
 }
 .email {
   margin-right: 30px;
+  color: #777;
+  &:hover {
+    text-decoration: none;
+    color: #555;
+  }
   i {
     font-size: 18px;
     position: relative;

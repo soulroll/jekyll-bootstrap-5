@@ -5,9 +5,11 @@ footer {
   color: #888;
   a {
     color: #888;
+    &:hover {
+      color: #fff;
+    }
   }
 }
-
 .footer-copyright {
   float: left;
 }
