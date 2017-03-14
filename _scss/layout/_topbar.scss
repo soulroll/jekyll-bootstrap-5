@@ -1,6 +1,6 @@
 /* Header */
 .topbar {
-  @include rem(padding, 4px 0px 4px 0px);
+  @include rem(padding, 8px 0px 8px 0px);
   background-color: #eee;
   h1 {
     display: inline;
@@ -9,6 +9,9 @@
     font-size: 16px;
     color: #777;
   }
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
 }
 .phone,
 .email {
@@ -16,7 +19,7 @@
   color: #777;
 }
 .email {
-  margin-right: 30px;
+  @include rem(margin-right, 30px);
   color: #777;
   &:hover {
     text-decoration: none;
@@ -25,7 +28,7 @@
   i {
     font-size: 18px;
     position: relative;
-    margin-right: 2px;
+    @include rem(margin-right, 2px);
   }
 }
 .phone {

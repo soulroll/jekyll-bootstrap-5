@@ -1,7 +1,7 @@
 /* Home Page */
 .home-intro {
   display: block;
-  @include rem(padding, 30px 0px 30px 0px);
+  @include rem(padding, 40px 0px 40px 0px);
   @include media-breakpoint-down(sm) {
     padding-bottom: 0;
     .btn-success {
@@ -11,7 +11,7 @@
 }
 
 .home-carousel {
-  @include rem(margin, 30px 0px 30px 0px);
+  @include rem(margin, 40px 0px 40px 0px);
   border: 1px solid #bbb;
   box-shadow: rgba(0,0,0,0.0980392) 0 1px 4px;
   img {

@@ -2,3 +2,27 @@
 .navbar-toggler {
   cursor: pointer;
 }
+.nav-link {
+  @include rem(padding, 12px 15px 12px 15px !important);
+  @include media-breakpoint-down(md) {
+    @include rem(padding, 12px 0px 12px 0px !important);
+    border-bottom: 1px solid #eee;
+  }
+}
+.navbar-nav {
+  li:last-child {
+    .nav-link {
+      @include rem(padding, 12px 25px 12px 25px !important);
+      margin-left: 15px;
+      background-color: #ddd;
+      @include media-breakpoint-down(md) {
+        @include rem(padding, 12px 0px 12px 0px !important);
+        margin-left: 0;
+        background-color: transparent;
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+
