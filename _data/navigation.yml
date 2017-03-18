@@ -2,11 +2,21 @@
 - title: "About"
   href: /about/
 
-- title: "Testimonials"
-  href: /testimonials/
+- title: "Services"
+  href: /services/
+  subcategories:
+    - subtitle: "Email"
+      subhref: "/services/email/"
+    - subtitle: "Domains"
+      subhref: "/services/domains"
+    - subtitle: "Hosting"
+      subhref: "/services/hosting"
 
 - title: "Websites"
   href: /websites/
+
+- title: "Testimonials"
+  href: /testimonials/
 
 - title: "Contact"
   href: /contact/

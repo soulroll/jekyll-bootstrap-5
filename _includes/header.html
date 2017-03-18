@@ -24,7 +24,16 @@
           {% for nav in site.data.navigation %}
 
             <li class="nav-item {% if page.url == nav.href %}active{% endif %}">
-              <a class="nav-link" href="{{ nav.href }}">{{ nav.title }}</a>
+              <a class="nav-link {% if nav.subcategories != null %}has-subcategory{% endif %}" href="{{ nav.href }}">{{ nav.title }}</a>
+
+              {% if nav.subcategories != null %}
+                <ul class="subcategory">
+                  {% for subcategory in nav.subcategories %}
+                    <li class="nav-subitem"><a class="nav-sublink" href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+
             </li>
 
           {% endfor %}

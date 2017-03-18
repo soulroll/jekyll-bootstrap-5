@@ -1,0 +1,8 @@
+/* Transitions */
+@mixin transition($var, $duration, $timing-function) {
+  -webkit-transition: $var, $duration, $timing-function;
+  -moz-transition: $var, $duration, $timing-function;
+  -ms-transition: $var, $duration, $timing-function;
+  -o-transition: $var, $duration, $timing-function;
+  transition: $var, $duration, $timing-function;
+}
