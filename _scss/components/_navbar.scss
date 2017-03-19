@@ -12,7 +12,7 @@
   z-index: 99;
   background-color: #eee;
   opacity: 0;
-  border:1px solid #ccc;
+  border: 1px solid #ccc;
   &:before,
   &:after {
     position: absolute;
@@ -68,42 +68,28 @@
       opacity: 1;
     }
   }
+  position:relative;
+  @include media-breakpoint-down(md) {
+    border-bottom: 1px solid #eee;
+  }
+
 }
 
 .nav-link {
   display: block;
+  z-index: 1;
   @include rem(padding, 12px 15px 12px 15px !important);
   @include media-breakpoint-down(md) {
     @include rem(padding, 12px 0px 12px 0px !important);
-    border-bottom: 1px solid #eee;
   }
 }
 
-.nav-link.has-subcategory {
-  position: relative;
-  @include rem(padding, 12px 25px 12px 15px !important);
-  &:after {
-    top: 14px;
-    right: 11px;
-    position: absolute;
-    content: "\f0d7";
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 14px;
-  }
+.nav-link.has-subcat {
   @include media-breakpoint-down(md) {
-    @include rem(padding, 12px 0px 12px 0px !important);
-    &:after {
-      @include rem(padding, 14px 24px 13px 24px);
-      background-color: #eee;
-      right: 0;
-      top: 0;
-    }
+    margin-right: 58px;
   }
 }
+
 
 .navbar-nav {
   li:last-child {
@@ -115,10 +101,47 @@
         @include rem(padding, 12px 0px 12px 0px !important);
         margin-left: 0;
         background-color: transparent;
-        border-bottom: 0;
       }
     }
   }
+  li:last-child {
+    border-bottom: 0;
+  }
+}
+.dropdown-chevron-desktop {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
 }
 
+.dropdown-chevron-mobile {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 20px 12px 20px;
+  border-left: 1px solid #eee;
+  cursor: pointer;
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+  &:after {
+    font-family: FontAwesome;
+    content: '\f078';
+    font-size: 14px;
+  }
+}
+
+
+
+.dropdown-chevron-mobile.open {
+  &:after {
+    content: '\f077';
+  }
+}
+
+.subcategory.open {
+  display: block;
+  border-top:1px solid #eee;
+}
 

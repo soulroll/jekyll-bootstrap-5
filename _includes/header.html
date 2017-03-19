@@ -23,11 +23,19 @@
 
           {% for nav in site.data.navigation %}
             <li class="nav-item {% if page.url == nav.href %}active{% endif %}">
-              <a class="nav-link" href="{{ nav.href }}">{{ nav.title }}
-              {% if nav.subcategories != null %}
-                <i class="fa fa-caret-down" aria-hidden="true"></i>
-              {% endif %}
+
+              <a class="nav-link {% if nav.subcategories != null %}has-subcat{% endif %}" href="{{ nav.href }}">{{ nav.title }}
+              
+                {% if nav.subcategories != null %}
+                  <i class="fa fa-caret-down dropdown-chevron-desktop" aria-hidden="true"></i>
+                {% endif %}
+
               </a>
+
+              {% if nav.subcategories != null %}
+                <span class="dropdown-chevron-mobile"></span>
+              {% endif %}
+
               {% if nav.subcategories != null %}
                 <ul class="subcategory">
                   {% for subcategory in nav.subcategories %}
