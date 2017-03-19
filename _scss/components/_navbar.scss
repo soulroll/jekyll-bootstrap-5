@@ -2,22 +2,60 @@
 .navbar-toggler {
   cursor: pointer;
 }
-
 .subcategory {
+  @include rem(padding, 8px 15px 8px 15px !important);
   list-style: none;
   margin: 0;
   padding: 0;
   position: absolute;
   width: 200px;
-  padding: 15px;
   z-index: 99;
   background-color: #eee;
   opacity: 0;
+  border:1px solid #ccc;
+  &:before,
+  &:after {
+    position: absolute;
+    left: 40px;
+    content:'';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+  }
+  &:after {
+    top: -12px;
+    border-bottom: 12px solid #eee;
+  }
+  &:before {
+    top: -14px;
+    border-bottom: 13px solid #ccc;
+  }
   @include transition(opacity, 1s, ease-in-out);
+  @include media-breakpoint-down(md) {
+    @include rem(padding, 0px !important);
+    display: none;
+    &:before,
+    &:after {
+      display: none;
+    }
+    background: transparent;
+    opacity: 1;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    border: 0;
+  }
 }
 
-.subnav-link {
-  @include rem(padding, 12px 15px 12px 15px !important);
+.nav-sublink {
+  display: block;
+  color: rgba(0, 0, 0, 0.5); 
+  &:hover {
+    text-decoration: none;
+    color: #555;
+  }
+  @include rem(padding, 4px 0px 4px 0px !important);
   @include media-breakpoint-down(md) {
     @include rem(padding, 12px 0px 12px 0px !important);
     border-bottom: 1px solid #eee;
@@ -25,7 +63,7 @@
 }
 
 .nav-item {
-    &:hover {
+  &:hover {
     .subcategory {
       opacity: 1;
     }
@@ -45,24 +83,32 @@
   position: relative;
   @include rem(padding, 12px 25px 12px 15px !important);
   &:after {
-    top: 8px;
-    right: 10px;
+    top: 14px;
+    right: 11px;
     position: absolute;
-    content: "\f107";
+    content: "\f0d7";
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
     text-decoration: inherit;
     color: rgba(0, 0, 0, 0.5);
-    font-size: 20px;
+    font-size: 14px;
+  }
+  @include media-breakpoint-down(md) {
+    @include rem(padding, 12px 0px 12px 0px !important);
+    &:after {
+      @include rem(padding, 14px 24px 13px 24px);
+      background-color: #eee;
+      right: 0;
+      top: 0;
+    }
   }
 }
-
 
 .navbar-nav {
   li:last-child {
     .nav-link {
-      @include rem(padding, 12px 25px 12px 25px !important);
+      @include rem(padding, 12px 30px 12px 30px !important);
       margin-left: 15px;
       background-color: #ddd;
       @include media-breakpoint-down(md) {
@@ -74,3 +120,5 @@
     }
   }
 }
+
+
