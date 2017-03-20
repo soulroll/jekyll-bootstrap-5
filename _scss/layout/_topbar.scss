@@ -1,6 +1,6 @@
 /* Header */
 .topbar {
-  @include rem(padding, 8px 0px 8px 0px);
+  @include rem(padding, 9px 0px 9px 0px);
   background-color: #eee;
   h1 {
     display: inline;
@@ -15,8 +15,11 @@
 }
 .phone,
 .email {
+  position: relative;
+  top: 3px;
   float: right;
   color: #777;
+  font-size: 16px;
 }
 .email {
   @include rem(margin-right, 30px);

@@ -62,7 +62,7 @@ gulp.task('sass', function () {
 
 // Compile and minify Javascript into one bundle file
 gulp.task('js', function(done) {
-    gulp.src('js/src/*.js', function(err, files) {
+    gulp.src('_js/src/*.js', function(err, files) {
         if(err) done(err);
 
         var tasks = files.map(function(entry) {
@@ -89,7 +89,7 @@ gulp.task('js', function(done) {
  */
 gulp.task('watch', function () {
     gulp.watch('_scss/**/*.scss', ['sass']);
-    gulp.watch('_js/*.js', ['js']);
+    gulp.watch('_js/**/*.js', ['js']);
     gulp.watch(['*.html', '_layouts/*.html', '_pages/*', '_posts/*', '_data/*', '_includes/*'], ['jekyll-rebuild']);
 });
 

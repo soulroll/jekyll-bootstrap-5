@@ -1,7 +1,11 @@
 /* Header */
 header {
-  @include rem(padding, 20px 0px 20px 0px);
+  @include rem(padding, 25px 0px 25px 0px);
   .container {
     padding: 0;
   }
+}
+
+.navbar-brand {
+  font-size: 32px;
 }

@@ -1,4 +1,4 @@
-/* Home Page */
+/* Home Page Intro */
 .home-intro {
   display: block;
   @include rem(padding, 40px 0px 40px 0px);
@@ -23,9 +23,10 @@
   }
 }
 
+/* Home Page Cards */
 .home-page-center-background {
   background-color: #ccc;
-  @include rem(padding, 30px 0px 30px 0px);
+  @include rem(padding, 40px 0px 40px 0px);
   @include media-breakpoint-down(xs) {
     background-color: #fff;
   }
@@ -39,6 +40,7 @@
   box-shadow: rgba(0,0,0,0.0980392) 0 1px 4px;
   @include media-breakpoint-down(xs) {
     box-shadow: none;
+    border: 0px;
   }
   img {
     &:hover {
@@ -57,6 +59,7 @@
     img {
       float: left;
       width: 100%;
+      @include rem(margin-bottom, 15px);
     }
   }
   .home-box-content {
@@ -66,21 +69,18 @@
     @include media-breakpoint-down(md) {
       width: 50%;
     }
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(xs) {
       width: 100%;
+      padding: 0;
     }
   }
 }
 
-.call-to-action {
-  @include rem(padding, 20px 0px 20px 0px);
-  float: left;
-  width: 100%;
-  h3 {
-    @include rem(margin-top, 6px);
-  }
+/* Home Page Step Process */
+.home-page-step-process {
+  @include rem(padding, 40px 0px 40px 0px);
+  background-color: #fff;
 }
-.call-to-action-btn {
-  float: right;
-  @include rem(padding, 10px 20px 10px 20px);
+.step-information {
+  @include rem(margin-top, 75px);
 }

@@ -2,6 +2,7 @@
 .navbar-toggler {
   cursor: pointer;
 }
+
 .subcategory {
   @include rem(padding, 8px 15px 8px 15px !important);
   list-style: none;
@@ -48,17 +49,20 @@
   }
 }
 
+.nav-subitem {
+  border-bottom: 1px solid #eee;
+}
+
 .nav-sublink {
   display: block;
-  color: rgba(0, 0, 0, 0.5); 
+  color: rgba(0, 0, 0, 0.5);
   &:hover {
     text-decoration: none;
     color: #555;
   }
   @include rem(padding, 4px 0px 4px 0px !important);
   @include media-breakpoint-down(md) {
-    @include rem(padding, 12px 0px 12px 0px !important);
-    border-bottom: 1px solid #eee;
+    @include rem(padding, 12px 0px 12px 35px !important);
   }
 }
 
@@ -78,7 +82,7 @@
 .nav-link {
   display: block;
   z-index: 1;
-  @include rem(padding, 12px 15px 12px 15px !important);
+  @include rem(padding, 12px 16px 12px 16px !important);
   @include media-breakpoint-down(md) {
     @include rem(padding, 12px 0px 12px 0px !important);
   }
@@ -90,12 +94,11 @@
   }
 }
 
-
 .navbar-nav {
   li:last-child {
     .nav-link {
       @include rem(padding, 12px 30px 12px 30px !important);
-      margin-left: 15px;
+      margin-left: 18px;
       background-color: #ddd;
       @include media-breakpoint-down(md) {
         @include rem(padding, 12px 0px 12px 0px !important);
@@ -108,6 +111,7 @@
     border-bottom: 0;
   }
 }
+
 .dropdown-chevron-desktop {
   @include media-breakpoint-down(md) {
     display: none;
@@ -132,8 +136,6 @@
   }
 }
 
-
-
 .dropdown-chevron-mobile.open {
   &:after {
     content: '\f077';
@@ -144,4 +146,3 @@
   display: block;
   border-top:1px solid #eee;
 }
-
