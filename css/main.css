@@ -9497,15 +9497,15 @@ img {
       display: none; } }
 
 /* Home Page Cards */
-.home-page-center-background {
+.home-page-cards-background {
   background-color: #ccc;
   padding: 40px 0px 40px 0px;
   padding: 2.5rem 0rem 2.5rem 0rem; }
   @media (max-width: 575px) {
-    .home-page-center-background {
+    .home-page-cards-background {
       background-color: #fff; } }
 
-.home-box {
+.home-card {
   background-color: #fff;
   float: left;
   width: 100%;
@@ -9513,38 +9513,38 @@ img {
   -webkit-box-shadow: rgba(0, 0, 0, 0.0980392) 0 1px 4px;
           box-shadow: rgba(0, 0, 0, 0.0980392) 0 1px 4px; }
   @media (max-width: 575px) {
-    .home-box {
+    .home-card {
       -webkit-box-shadow: none;
               box-shadow: none;
       border: 0px; } }
-  .home-box img:hover {
+  .home-card img:hover {
     opacity: 0.9; }
   @media (max-width: 991px) {
-    .home-box {
+    .home-card {
       margin-bottom: 40px;
       margin-bottom: 2.5rem; }
-      .home-box img {
+      .home-card img {
         float: left;
         width: 50%; } }
   @media (max-width: 767px) {
-    .home-box {
+    .home-card {
       padding: 0px;
       padding: 0rem; }
-      .home-box img {
+      .home-card img {
         float: left;
         width: 100%;
         margin-bottom: 15px;
         margin-bottom: 0.9375rem; } }
-  .home-box .home-box-content {
+  .home-card .home-card-content {
     float: left;
     width: 100%;
     padding: 30px;
     padding: 1.875rem; }
     @media (max-width: 991px) {
-      .home-box .home-box-content {
+      .home-card .home-card-content {
         width: 50%; } }
     @media (max-width: 575px) {
-      .home-box .home-box-content {
+      .home-card .home-card-content {
         width: 100%;
         padding: 0; } }
 
@@ -9557,6 +9557,12 @@ img {
 .step-information {
   margin-top: 75px;
   margin-top: 4.6875rem; }
+
+/* Home Page Features */
+.home-page-features {
+  padding: 40px 0px 40px 0px;
+  padding: 2.5rem 0rem 2.5rem 0rem;
+  background-color: #fff; }
 
 /* Layout */
 /* Header */
@@ -9667,6 +9673,9 @@ footer {
 /* Header */
 .navbar-toggler {
   cursor: pointer; }
+  @media (max-width: 991px) {
+    .navbar-toggler {
+      margin-top: 12px; } }
 
 .subcategory {
   padding: 8px 15px 8px 15px !important;

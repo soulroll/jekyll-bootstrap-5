@@ -23,8 +23,14 @@
   }
 }
 
+
+
+
+
+
 /* Home Page Cards */
-.home-page-center-background {
+.home-page-cards-background {
+
   background-color: #ccc;
   @include rem(padding, 40px 0px 40px 0px);
   @include media-breakpoint-down(xs) {
@@ -32,7 +38,7 @@
   }
 }
 
-.home-box {
+.home-card {
   background-color: #fff;
   float: left;
   width: 100%;
@@ -62,7 +68,7 @@
       @include rem(margin-bottom, 15px);
     }
   }
-  .home-box-content {
+  .home-card-content {
     float: left;
     width: 100%;
     @include rem(padding, 30px);
@@ -76,6 +82,12 @@
   }
 }
 
+
+
+
+
+
+
 /* Home Page Step Process */
 .home-page-step-process {
   @include rem(padding, 40px 0px 40px 0px);
@@ -83,4 +95,11 @@
 }
 .step-information {
   @include rem(margin-top, 75px);
+}
+
+
+/* Home Page Features */
+.home-page-features {
+  @include rem(padding, 40px 0px 40px 0px);
+  background-color: #fff;
 }

@@ -1,6 +1,9 @@
 /* Header */
 .navbar-toggler {
   cursor: pointer;
+  @include media-breakpoint-down(md) {
+    margin-top: 12px;
+  }
 }
 
 .subcategory {
