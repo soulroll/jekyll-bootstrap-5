@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var cssnano = require('cssnano');
 var browserSync = require('browser-sync');
 var prefix = require('gulp-autoprefixer');
 var cp = require('child_process');
@@ -51,6 +52,7 @@ gulp.task('sass', function () {
     return gulp.src('_scss/main.scss')
         .pipe(sass({
             includePaths: ['scss'],
+            outputStyle: 'compressed',
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
