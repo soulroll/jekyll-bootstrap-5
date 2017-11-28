@@ -1,6 +1,7 @@
 /* Footer */
+
 footer {
-  @include rem(padding, 30px 0px 30px 0px);
+  @include rem(padding, 30px 0 30px 0);
   background-color: #333;
   color: #888;
   a {
@@ -10,13 +11,16 @@ footer {
     }
   }
 }
+
 .footer-copyright {
   float: left;
 }
+
 .footer-facebook {
   float: right;
   font-size: 24px;
 }
+
 .footer-twitter {
   float: right;
   font-size: 24px;
@@ -26,9 +30,11 @@ footer {
 .footer-sitemap {
   float: right;
 }
+
 .footer-author {
   float: right;
 }
+
 .footer-divider {
   &:after {
     content:"-";

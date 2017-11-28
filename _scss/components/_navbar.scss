@@ -1,9 +1,7 @@
-/* Header */
+/* Navigation */
+
 .navbar-toggler {
   cursor: pointer;
-  @include media-breakpoint-down(md) {
-    margin-top: 12px;
-  }
 }
 
 .subcategory {
@@ -37,7 +35,7 @@
   }
   @include transition(opacity, 1s, ease-in-out);
   @include media-breakpoint-down(md) {
-    @include rem(padding, 0px !important);
+    @include rem(padding, 0 !important);
     display: none;
     &:before,
     &:after {
@@ -63,9 +61,9 @@
     text-decoration: none;
     color: #555;
   }
-  @include rem(padding, 4px 0px 4px 0px !important);
+  @include rem(padding, 4px 0 4px 0 !important);
   @include media-breakpoint-down(md) {
-    @include rem(padding, 12px 0px 12px 35px !important);
+    @include rem(padding, 12px 0 12px 35px !important);
   }
 }
 
@@ -87,7 +85,7 @@
   z-index: 1;
   @include rem(padding, 12px 16px 12px 16px !important);
   @include media-breakpoint-down(md) {
-    @include rem(padding, 12px 0px 12px 0px !important);
+    @include rem(padding, 12px 0 12px 0 !important);
   }
 }
 
@@ -104,7 +102,7 @@
       margin-left: 18px;
       background-color: #ddd;
       @include media-breakpoint-down(md) {
-        @include rem(padding, 12px 0px 12px 0px !important);
+        @include rem(padding, 12px 0 12px 0 !important);
         margin-left: 0;
         background-color: transparent;
       }

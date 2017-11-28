@@ -1,7 +1,10 @@
 /* Page banner */
+
 .page-banner-background {
   background-color: #eee;
+  border-bottom: 1px solid #ddd;
 }
+
 .page-banner {
   @include rem(padding-top, 20px);
   @include rem(padding-bottom, 20px);

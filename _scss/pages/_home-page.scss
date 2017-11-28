@@ -1,7 +1,12 @@
-/* Home Page Intro */
+/* Home Page */
+
+.home-page-intro-container {
+  background-color: #fff;
+}
+
 .home-intro {
   display: block;
-  @include rem(padding, 40px 0px 40px 0px);
+  @include rem(padding, 40px 0 40px 0);
   @include media-breakpoint-down(sm) {
     padding-bottom: 0;
     .btn-success {
@@ -11,7 +16,7 @@
 }
 
 .home-carousel {
-  @include rem(margin, 40px 0px 40px 0px);
+  @include rem(margin, 40px 0 40px 0);
   border: 1px solid #bbb;
   box-shadow: rgba(0,0,0,0.0980392) 0 1px 4px;
   img {
@@ -23,16 +28,9 @@
   }
 }
 
-
-
-
-
-
-/* Home Page Cards */
 .home-page-cards-background {
-
   background-color: #ccc;
-  @include rem(padding, 40px 0px 40px 0px);
+  @include rem(padding, 40px 0 40px 0);
   @include media-breakpoint-down(xs) {
     background-color: #fff;
   }
@@ -61,7 +59,7 @@
     }
   }
   @include media-breakpoint-down(sm) {
-    @include rem(padding, 0px);
+    @include rem(padding, 0);
     img {
       float: left;
       width: 100%;
@@ -80,26 +78,4 @@
       padding: 0;
     }
   }
-}
-
-
-
-
-
-
-
-/* Home Page Step Process */
-.home-page-step-process {
-  @include rem(padding, 40px 0px 40px 0px);
-  background-color: #fff;
-}
-.step-information {
-  @include rem(margin-top, 75px);
-}
-
-
-/* Home Page Features */
-.home-page-features {
-  @include rem(padding, 40px 0px 40px 0px);
-  background-color: #fff;
 }
