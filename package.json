@@ -12,10 +12,10 @@
     "Browser-sync"
   ],
   "devDependencies": {
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^4.1.0",
     "popper.js": "^1.14.3",
     "browser-sync": "^2.23.6",
-    "browserify": "^16.1.1",
+    "browserify": "^16.2.0",
     "es6-promise": "^4.2.4",
     "event-stream": "^3.3.4",
     "font-awesome": "^4.7.0",
