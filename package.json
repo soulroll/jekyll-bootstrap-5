@@ -1,21 +1,25 @@
 {
   "name": "jekyll-bootstrap-4",
   "version": "0.0.0",
-  "description": "Jekyll + Gulp + Browser-sync + Bootstrap 4 + Font-Awesome",
+  "description": "Jekyll + Gulp + Browser-sync + Bootstrap 4 + Font-Awesome + Magnific popup",
   "main": "gulpfile.js",
   "author": "David Malone - david@souldesign.net.nz",
   "keywords": [
     "Jekyll",
     "Gulp",
-    "Sass",
+    "Scss",
     "Bootstrap",
+    "Jquery",
+    "Jquery match height",
+    "Font awesome",
+    "Magnific popup",
     "Browser-sync"
   ],
   "devDependencies": {
-    "bootstrap": "^4.1.0",
+    "bootstrap": "^4.1.1",
     "popper.js": "^1.14.3",
-    "browser-sync": "^2.23.6",
-    "browserify": "^16.2.0",
+    "browser-sync": "^2.24.4",
+    "browserify": "^16.2.2",
     "es6-promise": "^4.2.4",
     "event-stream": "^3.3.4",
     "font-awesome": "^4.7.0",
@@ -23,7 +27,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-flatten": "^0.4.0",
-    "gulp-rename": "^1.2.2",
+    "gulp-rename": "^1.2.3",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
@@ -31,9 +35,9 @@
     "jquery": "^3.3.1",
     "jquery-match-height": "^0.7.2",
     "magnific-popup": "^1.1.0",
-    "slick-carousel": "^1.8.1",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",
     "cssnano": "^3.10.0"
-  }
+  },
+  "dependencies": {}
 }
