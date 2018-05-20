@@ -3,29 +3,6 @@ global.Popper = require('popper.js');
 var bootstrap = require('bootstrap');
 var magnificPopup = require('magnific-popup');
 var matchHeight = require('jquery-match-height');
-var slick = require('slick-carousel');
-
-$('.browser-address-slider').slick({
-  arrows: false,
-  infinite: true,
-  speed: 300,
-  fade: true,
-  cssEase: 'linear',
-  autoplay: true,
-  autoplaySpeed: 3000,
-  asNavFor: '.browser-content-slider'
-});
-
-$('.browser-content-slider').slick({
-  arrows: false,
-  infinite: true,
-  speed: 300,
-  fade: true,
-  cssEase: 'linear',
-  autoplay: true,
-  autoplaySpeed: 3000,
-  asNavFor: '.browser-address-slider'
-});
 
 $('.browser-left-arrow').click(function(){
   $('.browser-content-slider').slick('slickPrev');
