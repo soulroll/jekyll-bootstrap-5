@@ -4,24 +4,6 @@ var bootstrap = require('bootstrap');
 var magnificPopup = require('magnific-popup');
 var matchHeight = require('jquery-match-height');
 
-$('.browser-left-arrow').click(function(){
-  $('.browser-content-slider').slick('slickPrev');
-})
-
-$('.browser-right-arrow').click(function(){
-  $('.browser-content-slider').slick('slickNext');
-})
-
-$('.home-testimonials').slick({
-  arrows: false,
-  infinite: true,
-  speed: 300,
-  fade: true,
-  cssEase: 'linear',
-  autoplay: true,
-  autoplaySpeed: 3000
-});
-
 $('.dropdown-chevron-mobile').on('click', function(e) {
 
   e.preventDefault();
