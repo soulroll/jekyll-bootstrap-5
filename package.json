@@ -16,7 +16,7 @@
     "Browser-sync"
   ],
   "devDependencies": {
-    "bootstrap": "^4.1.1",
+    "bootstrap": "^4.1.3",
     "popper.js": "^1.14.3",
     "browser-sync": "^2.24.4",
     "browserify": "^16.2.2",
