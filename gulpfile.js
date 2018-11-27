@@ -11,10 +11,6 @@ var flatten = require('gulp-flatten');
 var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var source = require('vinyl-source-stream');
 var concatjs = require('gulp-concat');
-
-var messages = {
-    jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
-};
 var browserSync = require('browser-sync').create();
 
 var paths = {
@@ -31,8 +27,7 @@ var paths = {
 };
 
 function jekyllBuild() {
-  browserSync.reload();
-  browserSync.notify(messages.jekyllBuild);
+  // browserSync.notify(messages.jekyllBuild); // .notify is depricated, moved reload to separate task
   return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
 }
 
@@ -64,18 +59,34 @@ function js() {
   .pipe(browserSync.reload({stream:true}))
 }
 
-function browserSyncServe() {
+function browserSyncServe(done) {
   browserSync.init({
     server: {
       baseDir: "_site"
     }
   })
+  done(); // added callback
+}
+
+// reload to trigger after hitting 'save'
+function browserSyncReload(done) { 
+  browserSync.reload();
+  done();
 }
 
 function watch() {
   gulp.watch(paths.styles.src, style)
   gulp.watch(paths.scripts.src, js)
-  gulp.watch(['*.html', '_layouts/*.html', '_pages/*', '_posts/*', '_data/*', '_includes/*'], jekyllBuild)
+  gulp.watch(
+    [
+    '*.html', 
+    '_layouts/*.html', 
+    '_pages/*', 
+    '_posts/*', 
+    '_data/*', 
+    '_includes/*'
+  ],
+  gulp.series(jekyllBuild, browserSyncReload)); // trigger browserSync on file change
 }
 
-gulp.task('default', gulp.parallel(jekyllBuild, browserSyncServe, watch))
+gulp.task('default', gulp.parallel(jekyllBuild, browserSyncServe, watch));
