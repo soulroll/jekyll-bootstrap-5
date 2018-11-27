@@ -27,7 +27,6 @@ var paths = {
 };
 
 function jekyllBuild() {
-  // browserSync.notify(messages.jekyllBuild); // .notify is depricated, moved reload to separate task
   return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
 }
 
@@ -65,11 +64,10 @@ function browserSyncServe(done) {
       baseDir: "_site"
     }
   })
-  done(); // added callback
+  done();
 }
 
-// reload to trigger after hitting 'save'
-function browserSyncReload(done) { 
+function browserSyncReload(done) {
   browserSync.reload();
   done();
 }
@@ -79,14 +77,14 @@ function watch() {
   gulp.watch(paths.scripts.src, js)
   gulp.watch(
     [
-    '*.html', 
-    '_layouts/*.html', 
-    '_pages/*', 
-    '_posts/*', 
-    '_data/*', 
+    '*.html',
+    '_layouts/*.html',
+    '_pages/*',
+    '_posts/*',
+    '_data/*',
     '_includes/*'
   ],
-  gulp.series(jekyllBuild, browserSyncReload)); // trigger browserSync on file change
+  gulp.series(jekyllBuild, browserSyncReload));
 }
 
-gulp.task('default', gulp.parallel(jekyllBuild, browserSyncServe, watch));
+gulp.task('default', gulp.parallel(jekyllBuild, browserSyncServe, watch))
