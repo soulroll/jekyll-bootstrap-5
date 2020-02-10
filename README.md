@@ -3,8 +3,8 @@ Jekyll + Gulp 4 + Browser-sync + Bootstrap 4 + Font-Awesome + Magnific popup
 
 ## Requirements
 ### https://jekyllrb.com/docs/installation/
-- Ruby (refer to jekyll documentation)
-- RubyGems (refer to jekyll documentation)
+- Ruby (refer to jekyll documentation or sudo apt-get install ruby-full)
+- RubyGems (refer to jekyll documentation or sudo apt-get install jekyll)
 - NodeJS (sudo apt-get install nodejs)
 - NPM (sudo apt-get install npm)
 - Gulp (sudo npm install gulp -g)
