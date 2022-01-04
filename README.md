@@ -1,5 +1,5 @@
-# Jekyll Bootstrap 4
-Jekyll + Gulp 4 + Browser-sync + Bootstrap 4 + Font-Awesome + Magnific popup
+# Jekyll Bootstrap 5
+Jekyll + Gulp 4 + Browser-sync + Bootstrap 5 + Font-Awesome + Magnific popup
 
 ## Requirements
 ### https://jekyllrb.com/docs/installation/

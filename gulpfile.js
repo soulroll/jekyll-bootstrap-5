@@ -1,15 +1,11 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 var cssnano = require('cssnano');
 var autoprefixer = require('autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var postcss = require('gulp-postcss');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
 var cp = require('child_process');
-var flatten = require('gulp-flatten');
 var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
-var source = require('vinyl-source-stream');
 var concatjs = require('gulp-concat');
 var browserSync = require('browser-sync').create();
 
@@ -48,8 +44,7 @@ function style() {
 function js() {
   return gulp.src([
     './node_modules/jquery/dist/jquery.min.js',
-    './node_modules/popper.js/dist/umd/popper.min.js',
-    './node_modules/bootstrap/dist/js/bootstrap.min.js',
+    './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
     './node_modules/jquery-match-height/dist/jquery.matchHeight-min.js',
     paths.scripts.src
   ])
