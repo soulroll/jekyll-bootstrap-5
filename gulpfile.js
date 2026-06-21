@@ -24,8 +24,8 @@ const paths = {
 };
 
 function jekyllBuild(done) {
-  return cp.spawn(jekyll, ['build'], { stdio: 'inherit' });
-  done();
+  const jekyllProcess = cp.spawn(jekyll, ['build'], { stdio: 'inherit' });
+  jekyllProcess.on('close', done);
 }
 
 function style() {
