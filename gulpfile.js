@@ -1,15 +1,16 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass')(require('sass'));
-var cssnano = require('cssnano');
-var autoprefixer = require('autoprefixer');
-var sourcemaps = require('gulp-sourcemaps');
-var postcss = require('gulp-postcss');
-var cp = require('child_process');
-var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
-var concatjs = require('gulp-concat');
-var browserSync = require('browser-sync').create();
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const sourcemaps = require('gulp-sourcemaps');
+const concat = require('gulp-concat');
+const cp = require('child_process');
+const browserSync = require('browser-sync').create();
 
-var paths = {
+const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
+
+const paths = {
   styles: {
     src: '_scss/**/*.scss',
     dest: '_site/css',
@@ -22,64 +23,75 @@ var paths = {
   }
 };
 
-function jekyllBuild() {
-  return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
+function jekyllBuild(done) {
+  return cp.spawn(jekyll, ['build'], { stdio: 'inherit' });
+  done();
 }
 
 function style() {
   return gulp.src(paths.styles.src)
+    .pipe(sourcemaps.init())
     .pipe(sass({
-      includePaths: ['scss'],
-      outputStyle: 'expanded',
-      onError: browserSync.notify
-    }))
+      outputStyle: 'expanded'
+    }).on('error', sass.logError))
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      cssnano()
     ]))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.styles.dest))
-    .pipe(browserSync.reload({stream:true}))
-    .pipe(gulp.dest(paths.styles.destsecond));
+    .pipe(gulp.dest(paths.styles.destsecond))
+    .pipe(browserSync.stream());
 }
 
 function js() {
   return gulp.src([
     './node_modules/jquery/dist/jquery.min.js',
-    './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+    './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
     './node_modules/jquery-match-height/dist/jquery.matchHeight-min.js',
     paths.scripts.src
   ])
-  .pipe(concatjs('app.bundle.js'))
+  .pipe(concat('app.bundle.js'))
   .pipe(gulp.dest(paths.scripts.dest))
-  .pipe(browserSync.reload({stream:true}))
+  .pipe(gulp.dest(paths.scripts.destsecond))
+  .pipe(browserSync.stream());
 }
 
-function browserSyncServe(done) {
+function serve(done) {
   browserSync.init({
     server: {
       baseDir: "_site"
     }
-  })
+  });
   done();
 }
 
-function browserSyncReload(done) {
+function reload(done) {
   browserSync.reload();
   done();
 }
 
-function watch() {
-  gulp.watch(paths.styles.src, style)
-  gulp.watch(paths.scripts.src, js)
-  gulp.watch(
-    [
+function watchFiles() {
+  gulp.watch(paths.styles.src, style);
+  gulp.watch(paths.scripts.src, js);
+
+  gulp.watch([
     '*.html',
-    '_layouts/*.html',
-    '_pages/*',
-    '_posts/*',
-    '_data/*',
-    '_includes/*'
-  ],
-  gulp.series(jekyllBuild, browserSyncReload));
+    '_layouts/**/*.html',
+    '_pages/**/*.html',
+    '_posts/**/*',
+    '_data/**/*',
+    '_includes/**/*'
+  ], gulp.series(jekyllBuild, reload));
 }
 
-gulp.task('default', gulp.parallel(jekyllBuild, browserSyncServe, watch))
+exports.build = jekyllBuild;
+exports.style = style;
+exports.js = js;
+exports.serve = serve;
+exports.watch = watchFiles;
+
+exports.default = gulp.series(
+  jekyllBuild,
+  gulp.parallel(serve, watchFiles)
+);
